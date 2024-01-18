@@ -33,7 +33,7 @@ console.log(mongoose.connection.readyState);
 
 app.use((req, res, next) => {
   res.setHeader(
-    "React app URL"
+    "http://localhost:5173"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
