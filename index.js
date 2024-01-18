@@ -7,7 +7,7 @@ const port = 4000;
 
 // Define CORS options
 const corsOptions = {
- origin: 'http://localhost:5173',
+ origin: 'https://stu-db-client-9qv8.vercel.app',
  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
  allowedHeaders: ['Content-Type', 'Authorization'],
  credentials: true,
