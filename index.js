@@ -43,7 +43,8 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://your-frontend.com"
+    "http://localhost:5173/"
+    "React app URL"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
