@@ -2,7 +2,7 @@ const  express = require('express')
 const mongoose = require("mongoose");
 // const dotenv = require("dotenv");
 const cors = require("cors");
-@CrossOrigin(origins = "http://localhost:5173")
+// @CrossOrigin(origins = "http://localhost:5173")
 
 const StudentRoute = require("./Routes/student.js");
 const app = express()
