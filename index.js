@@ -2,6 +2,7 @@ const  express = require('express')
 const mongoose = require("mongoose");
 // const dotenv = require("dotenv");
 const cors = require("cors");
+@CrossOrigin(origins = "http://localhost:5173")
 
 const StudentRoute = require("./Routes/student.js");
 const app = express()
@@ -31,24 +32,12 @@ console.log(mongoose.connection.readyState);
 
 // const getUser = () => undefined;
 
-app.use((req, res, next) => {
-  res.setHeader(
-    "http://localhost:5173"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-  );
-  res.setHeader("Access-Control-Allow-Credentials", true);
-  res.setHeader("Access-Control-Allow-Private-Network", true);
-  //  Firefox caps this at 24 hours (86400 seconds). Chromium (starting in v76) caps at 2 hours (7200 seconds). The default value is 5 seconds.
-  res.setHeader("Access-Control-Max-Age", 7200);
-
-  next();
+app.options('/url...', function(req, res, next){
+   res.header('Access-Control-Allow-Origin', "*");
+   res.header('Access-Control-Allow-Methods', 'POST');
+   res.header("Access-Control-Allow-Headers", "accept, content-type");
+   res.header("Access-Control-Max-Age", "1728000");
+   return res.sendStatus(200);
 });
 
 //middleware
