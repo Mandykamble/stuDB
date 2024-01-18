@@ -14,8 +14,8 @@ app.use(express.json());
 // app.use(cookieParser());
 
 // connecting db
-const mongoDBURI = 'mongodb://localhost:27017/studentDB';
-// const mongoDBURI = 'mongodb+srv://Vandana100:Vandana100@assinment1.nrbtdv2.mongodb.net/?retryWrites=true&w=majority';
+// const mongoDBURI = 'mongodb://localhost:27017/studentDB';
+const mongoDBURI = 'mongodb+srv://Vandana100:Vandana100@assinment1.nrbtdv2.mongodb.net/?retryWrites=true&w=majority';
 mongoose.set("strictQuery", false);
 mongoose.connect(mongoDBURI);
 console.log(mongoose.connection.readyState);
