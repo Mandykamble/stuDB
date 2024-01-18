@@ -1,10 +1,16 @@
 const  express = require('express')
 const mongoose = require("mongoose");
 // const dotenv = require("dotenv");
+const cors = require("cors");
 
 const StudentRoute = require("./Routes/student.js");
 const app = express()
 const port = 4000
+
+const corsOptions = {
+  origin: /\.onrender\.com$/,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",};
+app.use(cors(corsOptions));
 
 
 
