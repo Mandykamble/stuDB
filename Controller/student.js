@@ -21,8 +21,9 @@ exports.postStudent = async(req,res,next) =>{
         var miniutes =hours*60;
         var seconds =miniutes*60;
 
-        console.log(`Dear ${req.body.Sname} you will require ${diffDays} days, ${weeks} weeks,${hours} hours,${miniutes} miniutes, ${seconds} seconds to complete the cource`);
-
+       var dur = `Dear ${req.body.Sname}, Duration of cource is ${diffDays} days, ${weeks} weeks,${hours} hours`;
+        newStudent.Duration=dur;
+        await newStudent.save();
         res.status(200).json(newStudent);
 
 
