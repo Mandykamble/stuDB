@@ -33,6 +33,10 @@ const Studentschema= new mongoose.Schema({
         Enddate:{
             type:Date
         },
+        Duration:{
+            type:String
+        }
+
 
 }) 
 
